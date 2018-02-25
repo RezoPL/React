@@ -59,7 +59,7 @@ var MoviePicture = React.createClass({
 
 var Movie = React.createClass({
     propTypes: {
-        movies: React.PropTypes.object.isRequired,
+        movie: React.PropTypes.object.isRequired,
     },
 
     render: function() {
@@ -80,7 +80,7 @@ var MovieList = React.createClass({
         return (
             React.createElement('ul', {}, 
                 this.props.moviesArray.map(function(movie) {
-                    return React.createElement(Movie, {key: movie.id,})
+                    return React.createElement(Movie, {key: movie.id, movie:movie})
                 })
             )
         )
